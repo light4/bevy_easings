@@ -1,6 +1,6 @@
 [package]
 name = "bevy_easings"
-version = "0.6.0"
+version = "0.7.0-dev"
 authors = ["François Mockers <mockersf@gmail.com>"]
 edition = "2021"
 description = "Easing plugin for Bevy"
@@ -16,11 +16,11 @@ exclude = ["examples/*.gif"]
 interpolation = "0.2"
 
 [dependencies.bevy]
-version = "0.6"
+version = "0.7.0-dev"
 default-features = false
 
 [dev-dependencies.bevy]
-version = "0.6"
+version = "0.7.0-dev"
 default-features = false
 features = ["render"]
 
@@ -66,3 +66,7 @@ required-features = [ "examples" ]
 [[example]]
 name = "ui_color"
 required-features = [ "examples" ]
+
+[patch.crates-io]
+# fix_android branch
+bevy = { git = "https://github.com/light4/bevy.git", rev = "6ce45ad" }
